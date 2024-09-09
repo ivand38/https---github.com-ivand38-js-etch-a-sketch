@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <h1>Etch-A-Sketch</h1>
+        </div>
+        <div class="new">
+            <input type="number" id="grid-size" inputmode="numeric" placeholder="Enter grid size (Max 64)" min="0"
+                max="64">
+            <button id="new-btn" class="buttonWhite" onclick="changeGrid()"><i class="bi bi-plus-circle"></i>New
+                Grid</button>
+        </div>
+        <div id="snackbar"><i class="bi bi-x-circle"></i>Input must
+            be more than 0 and
+            less than 64</div>
+        <div id="container"></div>
+        <div class="extra">
+            <button id="random-btn" class="buttonWhite" onclick="randomColor()"><i class="bi bi-shuffle"></i> Random
+                Color</button>
+            <button id="pick-btn" class="buttonWhite"><input type="color" value="#ffffff" id="color-picker"
+                    onclick="colorGrid()">
+                Pick</button>
+            <button id="erase-btn" class="buttonWhite" onclick="eraseGrid()"><i class="bi bi-eraser"></i> Erase</button>
+            <button id="reset-btn" class="buttonWhite" onclick="resetGrid()"><i
+                    class="bi bi-arrow-clockwise"></i>Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
